@@ -1,16 +1,25 @@
 /* nav */
 
 nav {
-    padding: 6px 6px;
+    padding: 8px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    min-height: 53.33px;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px #00000036;
 }
 
 .nav-contenedor {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    align-items: center;
 
     & img {
         background-color: bisque;
+        width: 42px;
+        height: auto;
     }
 
     & ul {
@@ -19,19 +28,37 @@ nav {
         justify-content: center;
         gap: 16px;
         flex-grow: 1;
+        
+        & li a{
+            font-size: clamp(16px, 4vw, 18px);
+            font-weight: 500;
+
+            &:hover{
+                font-weight: 600;
+            }
+        }
     }
 
     & .nav-iconos {
         display: flex;
         flex-flow: row nowrap;
-        align-items: baseline;
-        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        & a{
+            display: inline-flex;
+        }
 
         & .iconos--tema {
             display: flex;
             flex-flow: row nowrap;
-            align-items: baseline;
-            gap: 4px;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        @media screen  and (width >= 360px){
+            gap: 16px;
         }
     }
 }
@@ -39,10 +66,13 @@ nav {
 /* Header */
 
 .header-Index {
+    margin-top: 54.33px;
     background-image: url("../media/foto-sin-fondo.jpg");
+    min-height: 400px;
     display: flex;
     flex-flow: column nowrap;
-    padding: 36px 10px;
+    justify-content: space-between;
+    padding: 36px 20px;
     gap: 40px;
 
     & h1 {
@@ -77,6 +107,7 @@ nav {
 
 #section-valorAgregado {
     padding: 20px 20px;
+    
 }
 
 .contenedor-cards {
@@ -112,6 +143,8 @@ nav {
     }
 }
 
+/* Section Viajes */
+
 #section-viajes {
     background-color: blanchedalmond;
     width: 100%;
@@ -119,13 +152,7 @@ nav {
     display: flex;
     flex-flow: column nowrap;
     gap: 28px;
-
-    & h3 {
-        font-size: 24px;
-        color: #ff0000;
-        font-weight: 500;
-        text-align: center;
-    }
+    scroll-margin-top: 40px
 }
 
 .contenedor-viajes {
@@ -156,10 +183,88 @@ nav {
 
         & p{
             font-size: 16px;
+            font-weight: 500;
         }
     }
 }
 
+/* Section nosotros */
+
+#section-nosotros {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 40px 0px;
+    gap: 20px;
+    scroll-margin-top: 40px;
+
+    & img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.contenedor-nosotros {
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 12px;
+
+    & .card-nosotros {
+        background-color: #ffff;
+        padding: 12px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
+        max-width: 574px;
+
+        & p{
+            font-size: 14px;
+
+            & span{
+                color: #ff0000;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #FDDFDF;
+    padding: 10px 20px;
+}
+
+.footer-contenedor {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & img{
+        width: 48px;
+        height: auto;
+    }
+
+    & p{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    & i{
+        font-size: 1.6em;
+        transition: color .3s ease;
+
+        &:hover{
+            color: #ff0000 !important;
+        }
+    }
+}
+
+/* styles compartidos */
 .btn{
     background-color: #ff0000;
     width: 100%;
@@ -167,4 +272,26 @@ nav {
     text-align: center;
     max-width: 160px;
     border-radius: 8px;
+    transition: background-color .3s ease-out;
+
+    &:hover{
+        background-color: #e30000;
+    }
+}
+
+.titulo-section__index {
+    font-size: 24px;
+    color: #ff0000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.icon-nav {
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: color .3s ease;
+    
+    &:hover{
+        color: #ff0000 !important;
+    }
 }
