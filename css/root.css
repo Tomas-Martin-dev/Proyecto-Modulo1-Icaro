@@ -53,9 +53,54 @@ hr {
 body {
   line-height: 1.5;
   font-family: sans-serif;
-  background-color: #f7f3f3;
+  background-color: var(--bg);
   font-family: "Quicksand", sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-sun{
+        display: none !important;
+    }
+    :root {
+        color-scheme: dark;
+        --texto: #E7BABA;
+        --texto-reverse: #000000;
+        --texto-alt: var(--texto-reverse);
+        --texto-h: #C8ACD6;
+        --texto-altH: #2E236C;
+        --icon: #C8ACD6;
+        --icon-hover: var(--texto-reverse);
+        --icon-VA: var(--icon);
+        --bg-cards: #2E236C;
+        --bg-footer: #433D8B;
+        --bg-button: #433D8B;
+        --bg-button-hover: #3d3779;
+        --bg: #17153B;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .icon-dark{
+        display: none !important;
+    }
+    :root {
+        color-scheme: light;
+        --texto: #000000;
+        --texto-reverse: #ffffff;
+        --texto-alt: #ff0000;
+        --texto-h: #ff0000;
+        --texto-altH: var(--texto-alt);
+        --icon: var(--texto);
+        --icon-hover: var(--texto-alt);
+        --icon-VA: #ff0000;
+        --bg-cards: #fff;
+        --bg-footer: #FDDFDF;
+        --bg-button: #ff0000;
+        --bg-button-hover: #e30000;
+        --bg: #f7f3f3;
+    }
 }

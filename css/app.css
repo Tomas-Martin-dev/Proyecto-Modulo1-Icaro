@@ -1,13 +1,13 @@
 /* nav */
 
 nav {
-    padding: 8px 20px;
+    padding: 12px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     height: auto;
     min-height: 53.33px;
-    background-color: #FFF;
+    background-color: var(--bg-cards);
     box-shadow: 0 1px 3px #00000036;
 }
 
@@ -17,7 +17,6 @@ nav {
     align-items: center;
 
     & img {
-        background-color: bisque;
         width: 42px;
         height: auto;
     }
@@ -32,6 +31,7 @@ nav {
         & li a{
             font-size: clamp(16px, 4vw, 18px);
             font-weight: 500;
+            color: var(--texto);
 
             &:hover{
                 font-weight: 600;
@@ -43,7 +43,7 @@ nav {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 12px;
 
         & a{
@@ -66,7 +66,7 @@ nav {
 /* Header */
 
 .header-Index {
-    margin-top: 54.33px;
+    margin-top: 53px;
     background-image: url("../media/foto-sin-fondo.jpg");
     min-height: 400px;
     display: flex;
@@ -79,16 +79,18 @@ nav {
         text-align: center;
         font-size: 34px;
         font-weight: bold;
+        color: black;
     }
 
     & p {
         padding-right: 38%;
         font-size: clamp(20px, 4.1vw, 26px);
         font-weight: 500;
+        color: black;
 
         & span {
             font-weight: 600;
-            color: #ff0000;
+            color: var(--texto-altH);
         }
 
     }
@@ -119,7 +121,7 @@ nav {
     gap: 40px;
 
     .card-vA {
-        background-color: #ffff;
+        background-color: var(--bg-cards);
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
@@ -133,12 +135,14 @@ nav {
         & i {
             font-size: 4em;
             text-align: center;
+            color: var(--icon-VA);
         }
 
         & p {
             font-size: 16px;
             text-align: center;
             font-weight: 500;
+            color: var(--texto);
         }
     }
 }
@@ -146,7 +150,6 @@ nav {
 /* Section Viajes */
 
 #section-viajes {
-    background-color: blanchedalmond;
     width: 100%;
     padding: 40px 20px;
     display: flex;
@@ -163,7 +166,7 @@ nav {
     gap: 48px;
 
     & .card-viaje {
-        background-color: #ffff;
+        background-color: var(--bg-cards);
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
@@ -184,6 +187,7 @@ nav {
         & p{
             font-size: 16px;
             font-weight: 500;
+            color: var(--texto);
         }
     }
 }
@@ -213,7 +217,7 @@ nav {
     gap: 12px;
 
     & .card-nosotros {
-        background-color: #ffff;
+        background-color: var(--bg-cards);
         padding: 12px;
         border-radius: 4px;
         box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
@@ -221,9 +225,10 @@ nav {
 
         & p{
             font-size: 14px;
+            color: var(--texto);
 
             & span{
-                color: #ff0000;
+                color: var(--texto-alt);
             }
         }
     }
@@ -232,8 +237,8 @@ nav {
 /* Footer */
 
 footer {
-    background-color: #FDDFDF;
-    padding: 10px 20px;
+    background-color: var(--bg-footer);
+    padding: 12px 20px;
 }
 
 .footer-contenedor {
@@ -243,55 +248,77 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
 
     & img{
         width: 48px;
         height: auto;
     }
 
-    & p{
-        font-size: 12px;
+    & p,a{
+        display: block;
+        font-size: 10px;
         text-align: center;
+        color: var(--texto);
     }
 
     & i{
         font-size: 1.6em;
         transition: color .3s ease;
+        color: var(--icon);
 
         &:hover{
-            color: #ff0000 !important;
+            color: var(--icon-hover) !important;
         }
     }
 }
 
 /* styles compartidos */
+
 .btn{
-    background-color: #ff0000;
+    background-color: var(--bg-button);
     width: 100%;
     padding: 6px 0;
     text-align: center;
     max-width: 160px;
     border-radius: 8px;
     transition: background-color .3s ease-out;
+    color: var(texto-reverse);
 
     &:hover{
-        background-color: #e30000;
+        background-color: var(--bg-button-hover);
     }
 }
 
 .titulo-section__index {
     font-size: 24px;
-    color: #ff0000;
+    color: var(--texto-h);
     font-weight: 500;
     text-align: center;
 }
 
 .icon-nav {
     font-size: 1.3em;
-    cursor: pointer;
     transition: color .3s ease;
+    color: var(--icon);
     
     &:hover{
-        color: #ff0000 !important;
+        color: var(--icon-hover) !important;
     }
+}
+
+.icon-dark:hover::after{
+    position: absolute;
+    content: "Modo Oscuro Activado";
+    right: 4px;
+    top: 48px;
+    font-size: 8px;
+}
+
+.icon-sun:hover::after{
+    position: absolute;
+    content: "Modo Claro Activado";
+    right: 4px;
+    top: 48px;
+    font-size: 8px;
 }
