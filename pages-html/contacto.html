@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIERRA-X-BICI</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/root.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-contenedor">
+            <img src="" alt="logo">
+            <ul>
+                <li><a href="#section-viajes">Viajes</a></li>
+                <li><a href="#section-nosotros">Nosotros</a></li>
+                <li style="display: none;"><a href="./pages-html/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-iconos">
+                <i>TEL</i>
+                <div class="iconos--tema">
+                    <i>MOON</i>
+                    <i>SOL</i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Sierra x Bici</h1>
+        <p><span>Viva</span> con nosotros el mejor <span>paseo</span> en bicicleta por las <span>Sierras Cordobesas</span></p>
+    </header>
+    
+    <main>
+        <div class="contenedor">
+            <h3>Contáctanos</h3>
+            <p>Puedes completar el siguiente formulario con la dudas o consultas sobre nuestros servicios y te contestaremos de inmediato.</p>
+            <hr>
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Agrega tu Nombre" required minlength="3">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Agrega tu Apellido" required minlength="3">
+                <label for="tel">Teléfono</label>
+                <input type="tel" name="tel" id="tel" placeholder="Agrega un Telefono de contacto" required minlength="10">
+                <label for="email">Correo Eléctronico</label>
+                <input type="email" name="email" id="email" placeholder="Agrega tu Nombre" required>
+                <label for="viaje">Viaje</label>
+                <select required>
+                    <option value="" selected disabled>Selecciona una Opcion</option>
+                    <option value="1">Viaje 1</option>
+                    <option value="2">Viaje 2</option>
+                </select>
+                <label for="info">Comentario</label>
+                <textarea name="info" id="info" placeholder="Comentanos tus dudas y consultas" required></textarea>
+            </form>
+            <a href="./contacto.html">Contactar</a>
+        </div>    
+    </main>
+    
+    <footer>
+        <div class="footer-contenedor">
+            <img src="" alt="">
+            <p>&copy; 2025 - Todos los derechos reservados</p>
+            <i>TEL</i>
+        </div>
+    </footer>
+</body>
+</html>
