@@ -1,24 +1,49 @@
 /* nav */
 
 nav {
-    padding: 12px 20px;
+    background-color: var(--bg-cards);
     position: fixed;
     top: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
     width: 100%;
     height: auto;
     min-height: 53.33px;
-    background-color: var(--bg-cards);
+    padding: 12px 20px;
     box-shadow: 0 1px 3px #00000036;
+    z-index: 1000;
+
+    @media screen and (width > 1440px) {
+        padding: 14px 80px;
+    }
 }
 
 .nav-contenedor {
+    width: 100%;
     display: grid;
     grid-template-columns: .5fr 2fr .5fr;
     align-items: center;
 
+    @media screen and (width > 834px) {
+        max-width: 1080px;
+    }
+
+    @media screen and (width > 1440px) {
+        max-width: 1600px;
+    }
+
     & img {
         width: 42px;
         height: auto;
+
+        @media screen and (width >=834px) {
+            width: 58px;
+        }
+
+        @media screen and (width >=1440px) {
+            width: 64px;
+        }
     }
 
     & ul {
@@ -27,13 +52,25 @@ nav {
         justify-content: center;
         gap: 16px;
         flex-grow: 1;
-        
-        & li a{
+
+        @media screen and (width > 834px) {
+            justify-content: space-evenly;
+        }
+
+        & li a {
             font-size: clamp(16px, 4vw, 18px);
             font-weight: 500;
             color: var(--texto);
 
-            &:hover{
+            @media screen and (width >=834px) {
+                font-size: 20px;
+            }
+
+            @media screen and (width >=834px) {
+                font-size: 22px;
+            }
+
+            &:hover {
                 font-weight: 600;
             }
         }
@@ -46,7 +83,7 @@ nav {
         justify-content: space-evenly;
         gap: 12px;
 
-        & a{
+        & a {
             display: inline-flex;
         }
 
@@ -56,9 +93,13 @@ nav {
             align-items: center;
             gap: 6px;
         }
-        
-        @media screen  and (width >= 360px){
+
+        @media screen and (width >=360px) {
             gap: 16px;
+        }
+
+        @media screen and (width >=834px) {
+            justify-content: end;
         }
     }
 }
@@ -67,13 +108,14 @@ nav {
 
 .header-Index {
     margin-top: 53px;
-    background-image: url("../media/foto-sin-fondo.jpg");
     min-height: 400px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     padding: 36px 20px;
     gap: 40px;
+    position: relative;
+    overflow: hidden;
 
     & h1 {
         text-align: center;
@@ -87,6 +129,7 @@ nav {
         font-size: clamp(20px, 4.1vw, 26px);
         font-weight: 500;
         color: black;
+        text-shadow: 1px 1px 1px #00000086;
 
         & span {
             font-weight: 600;
@@ -103,13 +146,53 @@ nav {
             padding-right: 52%;
         }
     }
+
+    @media screen and (width > 834px) {
+        min-height: 560px;
+        padding: 40px 3.9% 40px 3.96%;
+
+        & h1 {
+            font-size: 42px;
+        }
+
+        & p {
+            font-size: 32px;
+            padding-right: 61%;
+        }
+    }
+
+    @media screen and (width > 1440px) {
+        min-height: 720px;
+        margin-top: 80px;
+        padding: 80px 5.9% 120px 5.9%;
+
+        & h1 {
+            font-size: 64px;
+        }
+
+        & p {
+            font-size: 40px;
+            padding-right: 70%;
+        }
+    }
 }
 
 /* section Valor Agregado */
 
 #section-valorAgregado {
-    padding: 20px 20px;
-    
+    padding: 20px 36px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @media screen and (width > 834px) {
+        padding: 40px 130px;
+    }
+
+    @media screen and (width > 834px) {
+        padding: 46px 190px;
+    }
+
 }
 
 .contenedor-cards {
@@ -118,13 +201,30 @@ nav {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
     gap: 40px;
+
+    @media screen and (width > 834px) {
+        padding: 0px 40px;
+        max-width: 680px;
+    }
+
+    @media screen and (width > 1440px) {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0px;
+        max-width: 1540px;
+        gap: 20px;
+    }
+
 
     .card-vA {
         background-color: var(--bg-cards);
         width: 100%;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
         gap: 20px;
         padding: 28px 10px;
         border-radius: 14px;
@@ -132,10 +232,30 @@ nav {
         min-width: 240px;
         box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.25);
 
+        @media screen and (width > 834px) {
+            max-width: none;
+            min-width: 0px;
+        }
+
+        @media screen and (width > 1440px) {
+            max-width: 414px;
+            min-width: 320px;
+            min-height: 348px;
+            padding: 80px 12px;
+        }
+
         & i {
             font-size: 4em;
             text-align: center;
             color: var(--icon-VA);
+
+            @media screen and (width > 834px) {
+                font-size: 4.2em;
+            }
+
+            @media screen and (width > 1440px) {
+                font-size: 6em;
+            }
         }
 
         & p {
@@ -143,6 +263,14 @@ nav {
             text-align: center;
             font-weight: 500;
             color: var(--texto);
+
+            @media screen and (width > 834px) {
+                font-size: 20px;
+            }
+
+            @media screen and (width > 1440px) {
+                font-size: 24px;
+            }
         }
     }
 }
@@ -154,8 +282,19 @@ nav {
     padding: 40px 20px;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     gap: 28px;
-    scroll-margin-top: 40px
+    scroll-margin-top: 40px;
+
+    @media screen and (width > 834px) {
+        padding: 40px 130px;
+        gap: 36px;
+    }
+
+    @media screen and (width > 1440px) {
+        padding: 46px 190px;
+        gap: 36px;
+    }
 }
 
 .contenedor-viajes {
@@ -164,6 +303,19 @@ nav {
     flex-flow: column nowrap;
     align-items: center;
     gap: 48px;
+
+    @media screen and (width > 834px) {
+        gap: 60px;
+        max-width: 680px;
+    }
+
+    @media screen and (width > 1440px) {
+        gap: 40px;
+        max-width: 1540px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
 
     & .card-viaje {
         background-color: var(--bg-cards);
@@ -179,15 +331,35 @@ nav {
         box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
         overflow: hidden;
 
-        & img{
+        @media screen and (width > 834px) {
+            gap: 18px;
+            padding-bottom: 26px;
+            max-width: none;
+            min-width: 0px;
+        }
+
+        @media screen and (width > 1440px) {
+            max-width: 700px;
+        }
+
+
+        & img {
             width: 100%;
             height: auto;
         }
 
-        & p{
+        & p {
             font-size: 16px;
             font-weight: 500;
             color: var(--texto);
+
+            @media screen and (width > 834px) {
+                font-size: 20px;
+            }
+
+            @media screen and (width > 1440px) {
+                font-size: 22px;
+            }
         }
     }
 }
@@ -198,13 +370,33 @@ nav {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     padding: 40px 0px;
     gap: 20px;
     scroll-margin-top: 40px;
 
-    & img{
+    @media screen and (width > 834px) {
+        gap: 36px;
+    }
+
+    @media screen and (width > 1440px) {
+        padding: 46px 190px;
+    }
+
+    & img {
         width: 100%;
         height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+        /* object-position: center 0px; */
+
+        @media screen and (width > 834px) {
+            max-height: 480px;
+        }
+
+        @media screen and (width > 1440px) {
+            max-height: 600px;
+        }
     }
 }
 
@@ -216,18 +408,41 @@ nav {
     align-items: center;
     gap: 12px;
 
+    @media screen and (width > 834px) {
+        gap: 20px;
+        padding: 0px 130px;
+    }
+
+    @media screen and (width > 1440px) {
+        padding: 0px 40px;
+    }
+
     & .card-nosotros {
+        width: 100%;
         background-color: var(--bg-cards);
         padding: 12px;
         border-radius: 4px;
         box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
         max-width: 574px;
 
-        & p{
+        @media screen and (width > 834px) {
+            max-width: 680px;
+            padding: 16px;
+        }
+
+        @media screen and (width > 1440px) {
+            max-width: 1060px;
+        }
+
+        & p {
             font-size: 14px;
             color: var(--texto);
 
-            & span{
+            @media screen and (width > 834px) {
+                font-size: 18px;
+            }
+
+            & span {
                 color: var(--texto-alt);
             }
         }
@@ -239,6 +454,12 @@ nav {
 footer {
     background-color: var(--bg-footer);
     padding: 12px 20px;
+
+    @media screen and (width > 834px) {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 }
 
 .footer-contenedor {
@@ -250,32 +471,57 @@ footer {
     align-items: center;
     gap: 4px;
 
-    & img{
-        width: 48px;
-        height: auto;
+    @media screen and (width > 1440px) {
+        max-width: 1600px;
     }
 
-    & p,a{
+    & img {
+        width: 58px;
+        height: auto;
+
+        @media screen and (width > 834px) {
+            font-size: 18px;
+        }
+
+        @media screen and (width > 1440px) {
+            width: 64px;
+        }
+    }
+
+    & p,
+    a {
         display: block;
         font-size: 10px;
         text-align: center;
         color: var(--texto);
+
+        @media screen and (width > 834px) {
+            font-size: 12px;
+        }
     }
 
-    & i{
+    & i {
         font-size: 1.6em;
         transition: color .3s ease;
         color: var(--icon);
 
-        &:hover{
+        &:hover {
             color: var(--icon-hover) !important;
+        }
+
+        @media screen and (width > 834px) {
+            font-size: 2.1em;
+        }
+
+        @media screen and (width > 1440px) {
+            font-size: 2.3em;
         }
     }
 }
 
 /* styles compartidos */
 
-.btn{
+.btn {
     background-color: var(--bg-button);
     width: 100%;
     padding: 6px 0;
@@ -285,8 +531,17 @@ footer {
     transition: background-color .3s ease-out;
     color: var(texto-reverse);
 
-    &:hover{
+    &:hover {
         background-color: var(--bg-button-hover);
+    }
+
+    @media screen and (width > 834px) {
+        font-size: 18px;
+        max-width: 220px;
+    }
+
+    @media screen and (width > 1440px) {
+        max-width: 360px;
     }
 }
 
@@ -295,30 +550,104 @@ footer {
     color: var(--texto-h);
     font-weight: 500;
     text-align: center;
+
+    @media screen and (width > 834px) {
+        font-size: 32px;
+    }
+
+    @media screen and (width > 1440px) {
+        font-size: 36px;
+    }
 }
 
 .icon-nav {
     font-size: 1.3em;
     transition: color .3s ease;
     color: var(--icon);
-    
-    &:hover{
+
+    &:hover {
         color: var(--icon-hover) !important;
+    }
+
+    @media screen and (width > 834px) {
+        font-size: 2.1em;
+    }
+
+    @media screen and (width >=1440px) {
+        font-size: 2.3em;
     }
 }
 
-.icon-dark:hover::after{
+.icon-dark:hover::after {
     position: absolute;
     content: "Modo Oscuro Activado";
     right: 4px;
     top: 48px;
     font-size: 8px;
+
+    @media screen and (width > 834px) {
+        right: 5%;
+        top: 60px;
+    }
+
+    @media screen and (width > 1440px) {
+        font-size: 10px;
+        top: 65px;
+    }
 }
 
-.icon-sun:hover::after{
+.icon-sun:hover::after {
     position: absolute;
     content: "Modo Claro Activado";
     right: 4px;
     top: 48px;
     font-size: 8px;
+
+    @media screen and (width > 834px) {
+        right: 5%;
+        top: 60px;
+    }
+
+    @media screen and (width > 1440px) {
+        font-size: 10px;
+        top: 65px;
+    }
 }
+
+.li-noneD {
+    @media screen and (width > 834px) {
+        display: list-item !important;
+    }
+}
+
+.icon-nav__contacto {
+    @media screen and (width > 834px) {
+        display: none !important;
+    }
+}
+
+.contenedor-img {
+    width: 100%;
+
+    @media screen and (width > 1440px) {
+        background-color: var(--bg-cards);
+        max-width: 1540px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 16px;
+        border-radius: 8px;
+    }
+}
+
+.header-Index::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.32)), url('../media/header2.jpg') center/cover no-repeat;
+    filter: blur(2px);
+    z-index: -1; 
+  }

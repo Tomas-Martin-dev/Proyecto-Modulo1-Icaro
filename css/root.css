@@ -71,7 +71,7 @@ html {
         --texto-reverse: #000000;
         --texto-alt: var(--texto-reverse);
         --texto-h: #C8ACD6;
-        --texto-altH: #2E236C;
+        --texto-altH: var(--texto-h);
         --icon: #C8ACD6;
         --icon-hover: var(--texto-reverse);
         --icon-VA: var(--icon);
