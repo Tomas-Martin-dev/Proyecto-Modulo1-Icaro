@@ -1,0 +1,221 @@
+@import "../css/root.css";
+
+.img-logo {
+    width: 42px;
+    height: auto;
+
+    @media screen and (width >=834px) {
+        width: 58px;
+    }
+
+    @media screen and (width >=1440px) {
+        width: 64px;
+    }
+}
+
+.page-container{
+    background-color: var(--bg);
+}
+
+.nav-container {
+    background-color: var(--bg-cards);
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-li{
+    @media screen and (width >= 834px){
+        font-size: 18px;
+    }
+    @media screen and (width >= 1440px){
+        font-size: 20px;
+    }
+    &:hover{
+        font-weight: 500;
+    }
+}
+
+.conteiner-icons{
+    width: 42px;
+}
+
+main{
+    margin-top: 57.33px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    @media screen and (width >= 834px){
+        margin-top: 71.55px;
+        padding: 28px;
+    }
+    
+    @media screen and (width >= 1440px){
+        margin-top: 76.89px;
+        padding: 36px;
+    }
+}
+
+.form-container {
+    background-color: var(--bg-cards);
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    @media screen and (width >= 834px){
+        max-width: 1040px;
+        padding: 18px;
+    }
+    @media screen and (width >= 1440px){
+        max-width: 1200px;
+        padding: 40px;
+    }
+}
+
+form{
+    @media screen and (width >= 1440px){
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    & div{
+        @media screen and (width >= 1440px){
+            max-width: 860px;
+            width: 100%;
+        }
+    }
+} 
+
+.form-title {
+    color: var(--texto);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    @media screen and (width >= 834px){
+        font-size: 1.8rem;
+    }
+    @media screen and (width >= 1440px){
+        font-size: 2.2rem;
+    }
+}
+
+.form-text {
+    margin-bottom: 20px;
+    color: var(--texto) !important;
+    @media screen and (width >= 834px){
+        font-size: 16px !important;
+    }
+    @media screen and (width >= 1440px){
+        padding-right: 40%;
+        font-size: 18px !important;
+    }
+}
+
+.form-divider {
+    border-top: 1px solid var(--texto-h);
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: var(--texto-h);
+    font-weight: 500;
+    margin-bottom: 5px !important;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-bottom: 15px;
+    border: none !important;
+    
+}
+
+.submit-btn {
+    background-color: #f03e3e;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    @media screen and (width >= 1440px){
+        max-width: 860px;
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: var(--bg-footer);
+    padding: 10px 15px;
+}
+
+.footer-p{
+    font-size: 12px;
+    color: var(--texto);
+    & a{
+        color: inherit;
+    }
+}
+
+.icon-nav {
+    font-size: 1.3em;
+    transition: color .3s ease;
+    color: var(--icon);
+
+    &:hover {
+        color: var(--icon-hover) !important;
+    }
+
+    @media screen and (width > 834px) {
+        font-size: 2.1em;
+    }
+
+    @media screen and (width >=1440px) {
+        font-size: 2.3em;
+    }
+}
+
+.icon-dark:hover::after {
+    position: absolute;
+    content: "Modo Oscuro Activado";
+    right: 4px;
+    top: 48px;
+    font-size: 8px;
+
+    @media screen and (width > 834px) {
+        right: 5%;
+        top: 60px;
+    }
+
+    @media screen and (width > 1440px) {
+        font-size: 10px;
+        top: 65px;
+    }
+}
+
+.icon-sun:hover::after {
+    position: absolute;
+    content: "Modo Claro Activado";
+    right: 4px;
+    top: 48px;
+    font-size: 8px;
+
+    @media screen and (width > 834px) {
+        right: 5%;
+        top: 60px;
+    }
+
+    @media screen and (width > 1440px) {
+        font-size: 10px;
+        top: 65px;
+    }
+}
+
+.btn{
+    background-color: var(--bg-button) !important;
+    border: none !important;
+    color: var(--texto) !important;
+    &:hover{
+        background-color: var(--bg-button-hover) !important;
+    }
+}
