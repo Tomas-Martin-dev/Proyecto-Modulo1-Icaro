@@ -19,13 +19,15 @@
 
 .nav-container {
     background-color: var(--bg-cards);
+    box-shadow: 0 1px 3px #00000036;
     padding: 10px 15px;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-.nav-li{
+#nav-li{
+    color: var(--texto) !important;
     @media screen and (width >= 834px){
         font-size: 18px;
     }
@@ -61,12 +63,12 @@ main{
 
 .form-container {
     background-color: var(--bg-cards);
-    padding: 10px;
+    padding: 16px;
     border-radius: 6px;
     width: 100%;
     @media screen and (width >= 834px){
         max-width: 1040px;
-        padding: 18px;
+        padding: 22px;
     }
     @media screen and (width >= 1440px){
         max-width: 1200px;
@@ -129,7 +131,8 @@ form{
     border: 1px solid #ced4da;
     margin-bottom: 15px;
     border: none !important;
-    
+    background-color: var(--bg) !important;
+    box-shadow: 1px .5px 2px #00000024;
 }
 
 .submit-btn {
