@@ -81,6 +81,7 @@ html {
         --bg-button: #433D8B;
         --bg-button-hover: #3d3779;
         --bg: #17153B;
+        --url-logo: url("../media/logo-dark.PNG");
     }
 }
 
@@ -104,5 +105,6 @@ html {
         --bg-button: #ff0000;
         --bg-button-hover: #e30000;
         --bg: #f7f3f3;
+        --url-logo: url("../media/logo-rojo.png");
     }
 }

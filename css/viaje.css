@@ -46,8 +46,20 @@ body {
     }
 }
 
-.conteiner-icons {
-    width: 42px;
+.conteiner-icons{
+    width: 48px;
+    text-align: end;
+    @media screen and (width >= 560px) {
+        width: 84px;
+    }
+
+    @media screen and (width >= 834px) {
+        width: 100px;
+    }
+
+    @media screen and (width >= 1440px) {
+        width: 120px;
+    }
 }
 
 .icon-nav {
@@ -277,4 +289,27 @@ ul {
     width: 100%;
     max-height: 600px;
     object-fit: cover;
+}
+
+.img-logo {
+    background-image: var(--url-logo);
+    width: 48px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (width >= 560px) {
+        width: 84px;
+        height: 42px;
+    }
+
+    @media screen and (width >= 834px) {
+        width: 100px;
+        height: 46px;
+    }
+
+    @media screen and (width >= 1440px) {
+        width: 120px;
+        height: 60px;
+    }
 }

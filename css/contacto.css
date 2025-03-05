@@ -40,7 +40,19 @@
 }
 
 .conteiner-icons{
-    width: 42px;
+    width: 48px;
+    text-align: end;
+    @media screen and (width >= 560px) {
+        width: 84px;
+    }
+
+    @media screen and (width >= 834px) {
+        width: 100px;
+    }
+
+    @media screen and (width >= 1440px) {
+        width: 120px;
+    }
 }
 
 main{
@@ -228,5 +240,28 @@ form{
     color: var(--texto) !important;
     &:hover{
         background-color: var(--bg-button-hover) !important;
+    }
+}
+
+.img-logo {
+    background-image: var(--url-logo);
+    width: 48px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (width >= 560px) {
+        width: 84px;
+        height: 42px;
+    }
+
+    @media screen and (width >= 834px) {
+        width: 100px;
+        height: 46px;
+    }
+
+    @media screen and (width >= 1440px) {
+        width: 120px;
+        height: 60px;
     }
 }
