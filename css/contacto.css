@@ -49,6 +49,7 @@ main{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    min-height: 90vh;
     
     @media screen and (width >= 834px){
         margin-top: 71.55px;
@@ -66,6 +67,7 @@ main{
     padding: 16px;
     border-radius: 6px;
     width: 100%;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
     @media screen and (width >= 834px){
         max-width: 1040px;
         padding: 22px;
@@ -106,8 +108,10 @@ form{
 .form-text {
     margin-bottom: 20px;
     color: var(--texto) !important;
+    padding-right: 24%;
     @media screen and (width >= 834px){
         font-size: 16px !important;
+        padding-right: 34%;
     }
     @media screen and (width >= 1440px){
         padding-right: 40%;
@@ -133,6 +137,10 @@ form{
     border: none !important;
     background-color: var(--bg) !important;
     box-shadow: 1px .5px 2px #00000024;
+    color: var(--texto) !important;
+    &::placeholder{
+        color: var(--texto) !important;
+    }
 }
 
 .submit-btn {

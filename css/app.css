@@ -424,7 +424,7 @@
         }
 
         & p {
-            font-size: 14px;
+            font-size: clamp(14px, 2.5vw, 16px);
             color: var(--texto);
 
             @media screen and (width > 834px) {
@@ -433,6 +433,7 @@
 
             & span {
                 color: var(--texto-alt);
+                font-weight: 500;
             }
         }
     }

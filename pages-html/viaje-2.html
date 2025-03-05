@@ -1,59 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIERRA-X-BICI</title>
-    <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/root.css">
-</head>
-<body>
-    <nav>
-        <div class="nav-contenedor">
-            <img src="" alt="logo">
-            <ul>
-                <li><a href="../index.html#section-viajes">Viajes</a></li>
-                <li><a href="../index.html#section-nosotros">Nosotros</a></li>
-                <li style="display: none;"><a href="./pages-html/contacto.html">Contacto</a></li>
-            </ul>
-            <div class="nav-iconos">
-                <i>TEL</i>
-                <div class="iconos--tema">
-                    <i>MOON</i>
-                    <i>SOL</i>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SIERRA-X-BICI</title>
+        <link rel="stylesheet" href="../css/viaje.css">
+        <link rel="stylesheet" href="../css/root.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <nav class="nav-container d-flex align-items-center justify-content-between z-3 px-xl-5">
+            <img class="logo-circle img-logo" src="../media/LOGO.png"></img>
+
+            <div class="d-flex gap-4 gap-xl-5">
+            <a 
+                href="../index.html#section-viajes"
+                class="text-decoration-none text-light"
+                id="nav-li"
+                >Viajes
+            </a>
+            <a 
+                href="#../index.html#section-nosotros"
+                class="text-decoration-none text-light"
+                id="nav-li"
+                >Nosotros
+            </a>
+            </div>
+
+            <div class="d-flex conteiner-icons justify-content-end">
+                <i class="fa-solid fa-moon icon-nav icon-dark"></i>
+                <i class="fa-solid fa-sun icon-nav icon-sun"></i>
+            </div>
+        </nav>
+
+        <main>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../media/paseo2.jpg" class="d-block w-100 cover" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../media/paseo2-1.jpg" class="d-block w-100 cover" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../media/paseo2-3.jpg" class="d-block w-100 cover" alt="Imagen 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            
+            <div class="container-main">
+                <div class="card w-100 mx-3">
+                    <div class="card-body text-center flex-column d-flex gap-1">
+                        <h6 class="mb-0 h6">Valor</h6>
+                        <h3 class="titulo-info fw-bold mb-0">Ars 10.750</h3>
+                        <p class="text-secondary mb-0">Precio por persona</p>
+                    </div>
+                </div>
+            
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="fw-bold titulo-info">Detalles del paquete</h5>
+                        <ul>
+                            <li>No te preocupes por nada. Te brindamos bicicletas de alta gama, cascos y un equipo de guías profesionales que te acompañarán en todo momento.</li>
+                            <li>Disfrutá de una parada en el camino para recargar energías con delicias locales: mates, quesos, salames y hasta una vista espectacular para relajarte</li>
+                            <li>Traslados desde Aeropuerto / Hotel / Estacion de Omnibus.</li>
+                            <li>1 dias de paseo y 1 noche de acampe</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="d-grid w-100 btn-w">
+                    <a href="../pages-html/contacto.html" class="text-decoration-none a-buttton btn btn-danger btn-md">¡ Contáctanos Ya !</a>
                 </div>
             </div>
-        </div>
-    </nav>
-    <header class="header-pageViajes">
-        <h1>Sierra x Bici</h1>
-        <p><span>Viva</span> con nosotros el mejor <span>paseo</span> en bicicleta por las <span>Sierras Cordobesas</span></p>
-    </header>
-    <main>
-        <div class="precio">
-            <p>Valor</p>
-            <p>Ars 555.000</p>
-            <p>Precio por persona</p>
-        </div>
+        </main>
 
-        <div>
-            <h3>Detalles del Paquete</h3>
-            <ul>
-                <li>Pasaje aéreo Buenos Aires/Bariloche/ Buenos Aires con vuelo de Aerolineas Argentinas</li>
-                <li>Incluye equipaje de mano (1 pieza de hasta 8kg) y equipaje en bodega (1 pieza de hasta 15kg)</li>
-                <li>Traslados Aeropuerto / Hotel / Aeropuerto en servicio regular.</li>
-                <li>03 noches de alojamiento con régimen según se indica.</li>
-            </ul>
-        </div>
-
-        <a href="./contacto.html" class="btn btn-pageViaje">¡ Contactanos Ya !</a>
-    </main>
-    <footer>
-        <div class="footer-contenedor">
-            <img src="" alt="">
-            <p>&copy; 2025 - Todos los derechos reservados</p>
-            <i>TEL</i>
-        </div>
-    </footer>
-</body>
+        <footer class="footer d-flex justify-content-between align-items-center gap-2 px-xl-5">
+            <div>
+                <img src="../media/LOGO.png" class="logo-circle img-logo" alt="Logo">
+            </div>
+            <div>
+                <p class="mb-0 text-center footer-p">© 2025 - Todos los derechos reservados
+                    <br>
+                    <a href="https://github.com/Tomas-Martin-dev" class="text-decoration-none">- By Tomas-dev -</a>
+                </p>
+            </div>
+            <div>
+                <i class="fas fa-phone icon-nav"></i></a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
