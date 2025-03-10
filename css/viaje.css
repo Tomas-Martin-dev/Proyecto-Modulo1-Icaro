@@ -159,6 +159,7 @@ main {
 
 .titulo-viaje {
     color: var(--texto-t-viaje) !important;
+    text-align: center;
     font-weight: 600;
     z-index: 200;
     position: absolute;
@@ -166,7 +167,10 @@ main {
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    
+    @media screen and (width <= 600px) {
+        font-size: clamp(14px, 4.1vw, 18px);
+        width: 100%;
+    }
 }
 
 .container-main {
